@@ -1,0 +1,399 @@
+/* stylesheets/style.css */
+
+* {
+  box-sizing: border-box;
+  font-family: "Grtsk" !important;
+}
+html {
+  background-color: #ececec;
+}
+/* МЕНЮ */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.3vw;
+  background-color: #fff;
+  z-index: 1000;
+  padding: 0.4vw;
+  transition: transform 0.5s cubic-bezier(0.12, 0.58, 0, 0.52),
+    opacity 0.5s ease;
+  will-change: transform, opacity;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.main-nav.hidden {
+  transform: translateY(-100%);
+  opacity: 0.9;
+}
+
+.main-menu {
+  max-width: 120vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 2vw;
+}
+
+.logo img,
+.heart img,
+.profile img {
+  height: 2vw;
+  width: auto;
+  display: block;
+}
+.heart img {
+  margin-right: -2vw;
+}
+.profile img {
+  margin-right: -1vw;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3vw;
+  font-size: 1.2vw;
+  font-weight: 500;
+  letter-spacing: -0.04vw;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  font-weight: 600;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right {
+  display: flex;
+  gap: 3vw;
+}
+
+/* ВИДЕО КАК ФОН ПЕРВОГО ЭКРАНА */
+.video_wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* ЛОГОС -->
+<main_images> НА ВИДЕО */
+
+.main_images {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ab,
+.glub {
+  height: auto;
+}
+.ab {
+  width: 37vw;
+  margin-right: 16vw;
+  margin-top: -20vw;
+}
+.glub {
+  width: 40vw;
+  margin-top: 2vw;
+  transform: translateX(-5.5vw);
+}
+
+.numbers {
+  position: absolute;
+  top: 39.5vw;
+  right: 20vw;
+  width: 28vw;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 59%;
+  left: 3.6%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  font-size: 1.3vw;
+  letter-spacing: -0.05vw;
+  color: black;
+  animation: typing 3s steps(60, end), blink 1s step-end infinite;
+}
+
+.text2 {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  font-size: 1.2vw;
+  letter-spacing: -0.05vw;
+  color: black;
+}
+
+.lol {
+  display: block;
+  margin-bottom: 0.01vw;
+}
+
+.drob {
+  position: absolute;
+  top: 96%;
+  left: 0.7%;
+}
+
+.contact-icon {
+  position: fixed;
+  right: 1.8vw;
+  bottom: 1.8vw;
+  z-index: 1000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-icon img {
+  width: 4vw;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.contact-icon:hover img {
+  transform: scale(1.1);
+}
+
+/* ЭКРАН 2: 50% ШИРИНЫ ЭКРАНА */
+.screen2 {
+  position: relative;
+  width: 100%;
+  height: 37vw;
+  /* display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  padding: 0;
+  margin: 0; */
+}
+
+.text1 {
+  width: 55vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.3vw;
+  letter-spacing: -0.05vw;
+  color: black;
+  box-sizing: border-box;
+}
+
+.ress {
+  font-weight: 500;
+  color: black;
+  margin: 1vw;
+  margin-left: 3.5vw;
+  padding: 0;
+  height: 5vw;
+  display: inline-block;
+  align-items: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: visible; /* или hidden, если нужно */
+}
+
+.res {
+  font-weight: 500;
+  display: block;
+}
+
+.us {
+  height: 30vw;
+  background-image: url("../images/us.svg");
+  background-size: cover;
+  background-position: center;
+  flex: 0 0 30vw;
+  margin-top: auto;
+}
+
+.kv_gr {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 45vw;
+  height: 37vw;
+  background-image: url("../images/us5.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center right;
+  z-index: 1;
+}
+
+.open {
+  position: absolute;
+  right: 2.5vw; /* Позиционирование от правого края screen2 */
+  top: 50%; /* Центр по вертикали */
+  transform: translateY(-60%); /* Поднимаем чуть выше центра */
+  width: 40vw;
+  height: 30vw;
+  background-image: url("../images/openspace.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 3;
+}
+.girls {
+  position: absolute;
+  right: 7vw; /* Позиционирование от правого края screen2 */
+  top: 50%; /* Центр по вертикали */
+  transform: translateY(27.8%); /* Поднимаем чуть выше центра */
+  width: 30vw;
+  height: 18vw;
+  background-image: url("../images/girls.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+}
+.silka1-link {
+  position: absolute;
+  right: 30vw;
+  top: 93.4%;
+  transform: translateY(27.8%);
+  width: 15vw;
+  height: 2vw;
+  text-decoration: none;
+  color: black; /* или любой нужный цвет */
+  display: block;
+  z-index: 2;
+}
+
+.silka1 {
+  position: absolute;
+  width: 15vw;
+  height: 2vw;
+  background-color: white;
+  z-index: -1; /* Чтобы фон был под текстом */
+}
+
+.silka1-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2vw;
+  font-weight: 500;
+  letter-spacing: -0.04vw;
+  pointer-events: auto; /* Важно — делает текст кликабельным */
+}
+
+.carousel-container {
+  position: relative;
+  width: 100vw;
+  height: 35vw;
+  margin-top: 3vw;
+  overflow: hidden;
+  padding: 0 1vw;
+}
+
+/* Верхний ряд */
+.top-row {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  margin-top: 3vw;
+  gap: 1vw;
+  margin-bottom: 2vw;
+}
+
+.top-row img {
+  width: 34vw;
+  height: 22.2vw;
+  object-fit: cover;
+
+  flex-shrink: 0;
+}
+
+/* Нижний ряд */
+.bottom-row {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 1vw;
+}
+
+.bottom-row img {
+  width: 34vw;
+  height: 9vw;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.controls {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 99vw; /* Чтобы стрелки были на краях контейнера */
+  z-index: 2;
+}
+
+.arrow {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+
+  font-size: 2vw;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

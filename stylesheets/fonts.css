@@ -1,0 +1,58 @@
+/* stylesheets/fonts.css */
+
+/* Regular 400 */
+@font-face {
+  font-family: "Grtsk";
+  src: url("../fonts/Grtsk/TRYGrtsk-Regular.18766434.ttf") format("truetype"),
+    url("../fonts/Grtsk/TRYGrtsk-Regular.18766434.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium 500 */
+@font-face {
+  font-family: "Grtsk";
+  src: url("../fonts/Grtsk/Grtsk-Medium-500.ttf") format("truetype"),
+    url("../fonts/Grtsk/TRYGrtsk-Medium.9b7e8a40.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SemiBold 600 */
+@font-face {
+  font-family: "Grtsk";
+  src: url("../fonts/Grtsk/Grtsk-SemiBold-600.ttf") format("truetype"),
+    url("../fonts/Grtsk/TRYGrtsk-SemiBold.5fb22340.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium + GigaSlant (наклонный, 500) */
+@font-face {
+  font-family: "Grtsk GigaSlant";
+  src: url("../fonts/Grtsk/Grtsk-MediumGigaSlant-500.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* SemiBold + ExaSlant (наклонный, 600) */
+@font-face {
+  font-family: "Grtsk ExaSlant";
+  src: url("../fonts/Grtsk/Grtsk-SemiBoldExaSlant-600.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* SemiBold + TeraSlant (наклонный, 600) */
+@font-face {
+  font-family: "Grtsk TeraSlant";
+  src: url("../fonts/Grtsk/Grtsk-SemiBoldTeraSlant-600.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}

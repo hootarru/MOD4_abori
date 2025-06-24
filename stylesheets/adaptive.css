@@ -1,0 +1,35 @@
+@media (max-width: 1440px) {
+  .numbers {
+    display: none;
+  }
+}
+/* @media (max-width: 992px) {
+  .screen2 {
+    flex-direction: column-reverse;
+    padding: 5vw 10vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .screen2 {
+    flex-direction: column-reverse;
+    padding: 5vw;
+  }
+
+  .screen2 .ress {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 3vw;
+  }
+
+  .screen2 .kv_gr {
+    width: 100%;
+    justify-content: center;
+    margin-top: 4vw;
+  }
+
+  .screen2 .kv_gr img {
+    max-width: 80%;
+  }
+} */
