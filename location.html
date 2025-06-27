@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ABORIGLUB</title>
+    >
     <link rel="stylesheet" href="stylesheets/fonts.css" />
     <link rel="stylesheet" href="stylesheets/style.css" />
-
     <script src="javascripts/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ&lang=ru_RU"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
-  <body>
+
+  <body class="page-location">
+    <!-- Меню навигации -->
     <nav class="main-nav">
       <div class="main-menu">
         <!-- Логотип слева -->
@@ -19,10 +24,9 @@
 
         <!-- Центральные ссылки -->
         <ul class="nav-links center">
-          <!-- <li><a href="#intro">Интро</a></li> -->
           <li><a href="location.html">Локация</a></li>
           <li><a href="author.html">Автор</a></li>
-          <li><a href="shop.html">Магазин</a></li>
+          <!-- <li><a href="shop.html">Магазин</a></li> -->
           <li><a href="levels.html">Уровни</a></li>
         </ul>
 
@@ -30,62 +34,88 @@
         <ul class="nav-links right">
           <li>
             <a href="reviews.html" class="heart">
-              <img src="images/heart_logo.svg" alt="Отзывы"
-            /></a>
+              <img src="images/heart_logo.svg" alt="Отзывы" />
+            </a>
           </li>
           <li>
             <a href="profile.html" class="profile">
-              <img src="images/person_logo.svg" alt="Профиль"
-            /></a>
+              <img src="images/person_logo.svg" alt="Профиль" />
+            </a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="carousel-container">
-      <!-- Верхний ряд -->
-      <div class="top-row" id="topRow">
-        <div class="news-item">
-          <img src="images/new1.svg" alt="Новость 1" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/new2.svg" alt="Новость 2" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/new3.svg" alt="Новость 3" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/new4.svg" alt="Новость 4" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/new5.svg" alt="Новость 5" class="news-image" />
-        </div>
-      </div>
+    <!-- Контактная иконка -->
+    <div class="contact-icon" id="contactTrigger">
+      <img src="images/sms3.svg" alt="Связаться с нами" />
 
-      <!-- Нижний ряд -->
-      <div class="bottom-row" id="bottomRow">
-        <div class="news-item">
-          <img src="images/newtext1.svg" alt="Новость 6" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/newtext2.svg" alt="Новость 7" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/newtext3.svg" alt="Новость 8" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/newtext4.svg" alt="Новость 9" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/newtext5.svg" alt="Новость 10" class="news-image" />
-        </div>
+      <!-- Блок с контактами (скрыт по умолчанию) -->
+      <div class="contact-popup" id="contactPopup"></div>
+    </div>
+
+    <div class="screen1_location">
+      <p class="text1_location">Пространство АБОРИГЛАБА</p>
+    </div>
+    <!-- Карусель "Локация" -->
+    <div class="carousel-location-container">
+      <div class="carousel-location-track" id="carouselLocationTrack">
+        <img src="images/loc6.svg" alt="Фото 1" />
+        <img src="images/loc3.svg" alt="Фото 2" />
+        <img src="images/loc4.svg" alt="Фото 3" />
+        <img src="images/loc5.svg" alt="Фото 4" />
+        <img src="images/loc2.svg" alt="Фото 5" />
+        <img src="images/loc1.svg" alt="Фото 6" />
       </div>
+      <p class="here">Тут рождаются легенды!</p>
+      <p class="here2">
+        *Где технологии встречаются с азартом — и превращаются в победы
+      </p>
 
       <!-- Стрелки -->
-      <div class="controls">
-        <button class="arrow left-arrow">⬅</button>
-        <button class="arrow right-arrow">➡</button>
+      <!-- <div class="carousel-location-controls">
+        <button class="carousel-location-arrow left">⬅</button>
+        <button class="carousel-location-arrow right">➡</button>
+      </div> -->
+    </div>
+    <!-- Контейнер для карты -->
+    <div class="screen2_location">
+      <p class="text2_location">На карте</p>
+
+      <div class="map-wrapper">
+        <div class="text3_location">
+          <img src="images/contacts.svg" alt="" />
+        </div>
+        <div class="telegram">
+          <img src="images/telegram.svg" alt="" />
+        </div>
+        <div class="whats">
+          <img src="images/whats.svg" alt="" />
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A4ac3c9ab373145e1df20d5f66feb9f0835fd6c52c92f22547437cb7214c71fea&amp;source=constructor"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            allowfullscreen
+            scrolling="yes"
+          >
+          </iframe>
+        </div>
       </div>
     </div>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <ul class="footer-links">
+          <li><a href="index.html">На главную</a></li>
+          <li><a href="location.html">Локация</a></li>
+          <li><a href="author.html">Автор</a></li>
+          <li><a href="levels.html">Уровни</a></li>
+          <li><a href="reviews.html">Отзывы</a></li>
+          <li><a href="profile.html">Профиль</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

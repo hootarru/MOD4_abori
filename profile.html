@@ -9,7 +9,7 @@
 
     <script src="javascripts/main.js"></script>
   </head>
-  <body>
+  <body class="page-profile">
     <nav class="main-nav">
       <div class="main-menu">
         <!-- Логотип слева -->
@@ -22,7 +22,7 @@
           <!-- <li><a href="#intro">Интро</a></li> -->
           <li><a href="location.html">Локация</a></li>
           <li><a href="author.html">Автор</a></li>
-          <li><a href="shop.html">Магазин</a></li>
+          <!-- <li><a href="shop.html">Магазин</a></li> -->
           <li><a href="levels.html">Уровни</a></li>
         </ul>
 
@@ -41,5 +41,49 @@
         </ul>
       </div>
     </nav>
+    <div class="contact-icon" id="contactTrigger">
+      <img src="images/sms3.svg" alt="Связаться с нами" />
+
+      <div class="contact-popup" id="contactPopup"></div>
+    </div>
+
+    <div id="authChoice" class="auth-choice">
+      <button class="register-btn" onclick="showForm('register')">
+        Зарегистрироваться
+      </button>
+      <button class="login-btn" onclick="showForm('login')">Войти</button>
+    </div>
+
+    <form id="registerForm">
+      <h2>Регистрация</h2>
+      <label>Имя </label>
+      <input type="text" id="regUsername" required minlength="3" />
+
+      <label>Email</label>
+      <input type="email" id="regEmail" required />
+
+      <label>Пароль</label>
+      <input type="password" id="regPassword" required minlength="6" />
+
+      <button type="submit">Создать аккаунт</button>
+    </form>
+
+    <form id="loginForm">
+      <h2>Вход</h2>
+      <label>Email</label>
+      <input type="email" id="loginEmail" required />
+
+      <label>Пароль</label>
+      <input type="password" id="loginPassword" required />
+
+      <button type="submit">Войти</button>
+    </form>
+
+    <div id="userData">
+      <h2>Добро пожаловать!</h2>
+      <p><strong>Имя:</strong> <span id="userUsername"></span></p>
+      <p><strong>Email:</strong> <span id="userEmail"></span></p>
+      <button class="logout-btn" onclick="logout()">Выйти</button>
+    </div>
   </body>
 </html>

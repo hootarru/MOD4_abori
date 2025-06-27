@@ -16,3 +16,24 @@
     border-color: #fff;
   }
 }
+@keyframes pulse {
+  0% {
+    transform: translateY(27.8%) scale(1);
+  }
+  50% {
+    transform: translateY(27.8%) scale(1.03);
+  }
+  100% {
+    transform: translateY(27.8%) scale(1);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

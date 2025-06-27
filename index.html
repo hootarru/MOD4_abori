@@ -8,154 +8,207 @@
     <link rel="stylesheet" href="stylesheets/style.css" />
 
     <script src="javascripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
   <body>
     <!-- МЕНЮ  -->
-    <nav class="main-nav">
-      <div class="main-menu">
-        <!-- Логотип слева -->
-        <a href="index.html" class="logo">
-          <img src="images/logo2.svg" alt="Логотип сайта" />
-        </a>
+    <div class="MENU">
+      <nav class="main-nav">
+        <div class="main-menu">
+          <!-- Логотип слева -->
+          <a href="index.html" class="logo">
+            <img src="images/logo2.svg" alt="Логотип сайта" />
+          </a>
 
-        <!-- Центральные ссылки -->
-        <ul class="nav-links center">
-          <li><a href="#intro">Интро</a></li>
-          <li><a href="location.html">Локация</a></li>
-          <li><a href="author.html">Автор</a></li>
-          <li><a href="shop.html">Магазин</a></li>
-          <li><a href="levels.html">Уровни</a></li>
-        </ul>
+          <!-- Центральные ссылки -->
+          <ul class="nav-links center">
+            <li><a href="#intro">Интро</a></li>
+            <li><a href="location.html">Локация</a></li>
+            <li><a href="author.html">Автор</a></li>
+            <!-- <li><a href="shop.html">Магазин</a></li> -->
+            <li><a href="levels.html">Уровни</a></li>
+          </ul>
 
-        <!-- Правые ссылки -->
-        <ul class="nav-links right">
-          <li>
-            <a href="reviews.html" class="heart">
-              <img src="images/heart_logo.svg" alt="Отзывы"
-            /></a>
-          </li>
-          <li>
-            <a href="profile.html" class="profile">
-              <img src="images/person_logo.svg" alt="Профиль"
-            /></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+          <!-- Правые ссылки -->
+          <ul class="nav-links right">
+            <li>
+              <a href="reviews.html" class="heart">
+                <img src="images/heart_logo.svg" alt="Отзывы"
+              /></a>
+            </li>
+            <li>
+              <a href="profile.html" class="profile">
+                <img src="images/person_logo.svg" alt="Профиль"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
-    <!-- ВИДЕО  -->
-    <div class="video_wrapper">
-      <div class="hero-section">
-        <video autoplay loop muted playsinline class="hero-video">
-          <source src="videos/video_main2.mp4" type="video/mp4" />
-          Ваш браузер не поддерживает видео.
-        </video>
-      </div>
-      <div class="main_images">
-        <!-- ТЕКСТ ПОВЕРХ ВИДЕО -->
-        <img src="images/abori_vec.svg" alt="ABORI" class="ab" />
-        <img src="images/glub.svg" alt="GLUB" class="glub" />
-      </div>
-      <img src="images/numbers.svg" alt="2025" class="numbers" />
-      <div class="overlay-text">
-        <p>
-          — уникальный компьютерный клуб
-          <span class="lol">для аборигенов. </span>
-          Здесь предоставляются услуги по использованию<span class="lol">
-          </span>
-          цифровых устройств и программного обеспечения
-        </p>
-      </div>
-      <div class="drob"><img src="images/drob.svg" alt="decor" /></div>
+    <!-- ВИДЕО:НАЧАЛО  -->
+    <div class="SCREEN1">
+      <div class="video_wrapper">
+        <div class="hero-section">
+          <video autoplay loop muted playsinline class="hero-video">
+            <source src="videos/video_main2.mp4" type="video/mp4" />
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
+        <div class="main_images">
+          <!-- ТЕКСТ ПОВЕРХ ВИДЕО -->
+          <img src="images/abori_vec.svg" alt="ABORI" class="ab" />
+          <img src="images/glub.svg" alt="GLUB" class="glub" />
+        </div>
+        <img src="images/numbers.svg" alt="2025" class="numbers" />
+        <div class="overlay-text">
+          <p>— уникальный компьютерный клуб</p>
 
-      <div class="contact-icon" id="contactTrigger">
-        <img src="images/sms3.svg" alt="Связаться с нами" />
+          <p>для аборигенов</p>
+          <p>Здесь предоставляются услуги по использованию</p>
+          <p>цифровых устройств и программного обеспечения</p>
+        </div>
+        <div class="drob"><img src="images/drob.svg" alt="decor" /></div>
 
-        <!-- Блок с контактами (скрыт по умолчанию) -->
-        <div class="contact-popup" id="contactPopup">
-          <!-- <p>Telegram: @example</p>
+        <div class="contact-icon" id="contactTrigger">
+          <img src="images/sms3.svg" alt="Связаться с нами" />
+
+          <!-- контакты -->
+          <div class="contact-popup" id="contactPopup">
+            <!-- <p>Telegram: @example</p>
           <p>Email: contact@example.com</p>
           <p>Телефон: +7 (999) 000-00-00</p> -->
+          </div>
         </div>
       </div>
     </div>
 
     <!-- ВТОРОЙ ЭКРАН -->
-    <section id="intro" class="intro-section">
-      <div class="screen2">
-        <div class="text1">
-          <p class="ress">
-            <span class="line">Ресурсный центр для игроманов и геймеров,</span>
-            <span class="line res"
-              >ограниченных в доступе к диджитал оборудованию</span
-            >
-          </p>
+    <div class="SCREEN2">
+      <section id="intro" class="intro-section">
+        <div class="screen2">
+          <div class="text1">
+            <p class="ress">
+              <span class="line"
+                >Ресурсный центр для игроманов и геймеров,</span
+              >
+              <span class="line res"
+                >ограниченных в доступе к диджитал оборудованию</span
+              >
+            </p>
 
-          <div class="us"></div>
+            <div class="us"></div>
+          </div>
+
+          <div class="kv_gr">
+            <div class="open"></div>
+            <div class="girls"></div>
+            <a href="location.html" class="silka1-link">
+              <div class="silka1"></div>
+              <span class="silka1-text">подробнее ➔</span>
+            </a>
+          </div>
         </div>
-
-        <div class="kv_gr">
-          <!-- Добавлено внутрь -->
-          <div class="open"></div>
-          <div class="girls"></div>
-          <a href="location.html" class="silka1-link">
-            <div class="silka1"></div>
-            <span class="silka1-text">подробнее ➔</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ТРЕТИЙ ЭКРАН: NEWS -->
-    <div class="screen3">
-      <section id="news" class="news-section">
-        <p class="cyber">КИБЕРновости</p>
       </section>
     </div>
-    <div class="carousel-container">
-      <!-- Верхний ряд -->
-      <div class="top-row" id="topRow">
-        <div class="news-item">
-          <img src="images/new1.svg" alt="Новость 1" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/new2.svg" alt="Новость 2" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/new3.svg" alt="Новость 3" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/new4.svg" alt="Новость 4" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/new5.svg" alt="Новость 5" class="news-image" />
-        </div>
-      </div>
 
-      <!-- Нижний ряд -->
-      <div class="bottom-row" id="bottomRow">
-        <div class="news-item">
-          <img src="images/newtext1.svg" alt="Новость 6" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/newtext2.svg" alt="Новость 7" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/newtext3.svg" alt="Новость 8" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/newtext4.svg" alt="Новость 9" class="news-image" />
-        </div>
-        <div class="news-item">
-          <img src="images/newtext5.svg" alt="Новость 10" class="news-image" />
-        </div>
+    <!-- ТРЕТИЙ ЭКРАН: NEWS -->
+    <div class="SCREEN3">
+      <div class="screen3">
+        <section id="news" class="news-section">
+          <p class="cyber">КИБЕРновости</p>
+        </section>
       </div>
+      <div class="carousel-container">
+        <!-- Верхний ряд -->
+        <div class="top-row" id="topRow">
+          <div class="news-item">
+            <img src="images/new1.svg" alt="Новость 1" class="news-image" />
+          </div>
+          <div class="news-item">
+            <img src="images/new2.svg" alt="Новость 2" class="news-image" />
+          </div>
+          <div class="news-item">
+            <img src="images/new3.svg" alt="Новость 3" class="news-image" />
+          </div>
+          <div class="news-item">
+            <img src="images/new4.svg" alt="Новость 4" class="news-image" />
+          </div>
+          <div class="news-item">
+            <img src="images/new5.svg" alt="Новость 5" class="news-image" />
+          </div>
+        </div>
 
-      <!-- Стрелки -->
-      <div class="controls">
-        <button class="arrow left-arrow">⬅</button>
-        <button class="arrow right-arrow">➡</button>
+        <!-- Нижний ряд -->
+        <div class="bottom-row" id="bottomRow">
+          <div class="news-item">
+            <img src="images/newtext1.svg" alt="Новость 6" class="news-image" />
+          </div>
+          <div class="news-item">
+            <img src="images/newtext2.svg" alt="Новость 7" class="news-image" />
+          </div>
+          <div class="news-item">
+            <img src="images/newtext3.svg" alt="Новость 8" class="news-image" />
+          </div>
+          <div class="news-item">
+            <img src="images/newtext4.svg" alt="Новость 9" class="news-image" />
+          </div>
+          <div class="news-item">
+            <img
+              src="images/newtext5.svg"
+              alt="Новость 10"
+              class="news-image"
+            />
+          </div>
+        </div>
+
+        <!-- Стрелки -->
+        <div class="controls">
+          <button class="arrow left-arrow">👈</button>
+          <button class="arrow right-arrow">👉</button>
+        </div>
       </div>
     </div>
+
+    <!-- ЧЕТВЕРТЫЙ ЭКРАН -->
+
+    <div class="black4">
+      <div class="text4">
+        <p>
+          Это локация, где сочетаются продуманный дизайн, мощные ПК и атмосфера,
+          созданная специально для побед.
+          <span class="lol"
+            >Здесь можно не только поиграть на высоком уровне,
+          </span>
+          но и комфортно провести время —
+          <span class="lol"
+            >с по-настоящему надежным техническим оснащением.
+          </span>
+        </p>
+      </div>
+      <div class="drob2"><img src="images/drob2.svg" alt="decor" /></div>
+      <a href="location.html" class="silka2-link">
+        <div class="silka2"></div>
+        <span class="silka2-text">подробнее ➔</span>
+      </a>
+    </div>
+
+    <div class="hands41">
+      <img src="images/hands41.png" alt="hands" />
+    </div>
+    <div class="hands4"></div>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <ul class="footer-links">
+          <li><a href="location.html">Локация</a></li>
+          <li><a href="author.html">Автор</a></li>
+          <li><a href="levels.html">Уровни</a></li>
+
+          <li><a href="reviews.html">Отзывы</a></li>
+          <li><a href="profile.html">Профиль</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
